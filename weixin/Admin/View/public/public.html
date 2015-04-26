@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>xyzcms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link href="__PUBLIC__/xyz.ico" rel="shortcut icon">
+
+    <!-- Bootstrap -->
+    <link href="__PUBLIC__/assets/css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/assets/css/vendor/animate/animate.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="__PUBLIC__/assets/js/vendor/mmenu/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/videobackground/css/jquery.videobackground.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/css/vendor/bootstrap-checkbox.css">
+
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/rickshaw/css/rickshaw.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/morris/css/morris.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/tabdrop/css/tabdrop.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/summernote/css/summernote.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/summernote/css/summernote-bs3.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/chosen/css/chosen.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/js/vendor/chosen/css/chosen-bootstrap.css">
+
+    <link href="__PUBLIC__/assets/css/minimal.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="__PUBLIC__/assets/js/html5shiv.js"></script>
+      <script src="__PUBLIC__/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="bg-6">
+    <!-- Preloader -->
+    <div class="mask"><div id="loader"></div></div>
+    <!--/Preloader -->
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Make page fluid -->
+      <div class="row">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top navbar-transparent-black mm-fixed-top" role="navigation" id="navbar">
+          <!-- Branding -->
+          <div class="navbar-header col-md-2">
+            <a class="navbar-brand" href="__CONTROLLER__/index">
+              xyzcms
+             </a>
+            <div class="sidebar-collapse">
+              <a href="#">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          <!-- .nav-collapse -->
+          <div class="navbar-collapse">
+            <!-- Quick Actions -->
+            <ul class="nav navbar-nav quick-actions">
+              <li class="dropdown divided user" id="current-user">
+                <div class="profile-photo">
+                  <img src="__PUBLIC__/xyz.ico" alt />
+                </div>
+                <a class="dropdown-toggle options" data-toggle="dropdown" href="#">
+                  主题设置
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu arrow settings">
+                  <li>
+                    <ul id="color-schemes">
+                      <li><a href="#" class="bg-1"></a></li>
+                      <li><a href="#" class="bg-2"></a></li>
+                      <li><a href="#" class="bg-3"></a></li>
+                      <li><a href="#" class="bg-4"></a></li>
+                      <li><a href="#" class="bg-5"></a></li>
+                      <li><a href="#" class="bg-6"></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-power-off"></i></a>
+              </li>         
+              <li class="divided">
+                <a href="#" class="page-refresh"><i class="fa fa-refresh"></i></a>
+              </li>
+            </ul>
+            <!-- /Quick Actions -->
+
+            <!-- Sidebar -->
+            <ul class="nav navbar-nav side-nav" id="sidebar">
+              
+              <li class="collapsed-content"> 
+                <ul>
+                  <li class="search"><!-- Collapsed search pasting here at 768px --></li>
+                </ul>
+              </li>
+
+              <li class="navigation" id="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="#navigation">操作管理<i class="fa fa-angle-up"></i></a>
+                
+                <ul class="menu">
+                  <li class="dropdown open">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-desktop"></i>　网站管理 <b class="fa fa-plus dropdown-plus"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项1
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项2
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项3
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-comments"></i>　微信管理 <b class="fa fa-plus dropdown-plus"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项1
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项2
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项3
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-user"></i>　权限管理 <b class="fa fa-plus dropdown-plus"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项1
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项2
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-caret-right"></i> 选项3
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> 
+            </ul>
+            <!-- Sidebar end -->
+
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <!-- Fixed navbar end -->
+        
+
+
+
+
+        
+        <!-- Page content -->
+        <div id="content" class="col-md-12">
+          <!-- page header -->
+          <div class="pageheader">
+            <h2><i class="fa fa-tachometer"></i> Dashboard
+            <span>// Place subtitle here...</span></h2>
+            <div class="breadcrumbs">
+              <ol class="breadcrumb">
+                <li>You are here</li>
+                <li><a href="index.html">Minimal</a></li>
+                <li class="active">Dashboard</li>
+              </ol>
+            </div>
+          </div>
+          <!-- /page header -->
+          <!-- content main container -->
+          <div class="main">
+            <!-- row -->
+            <div class="row">
+              <!-- col 12 -->
+              <div class="col-md-12">
+                <!-- tile -->
+                <section class="tile transparent">
+                  <div class="jumbotron bg-transparent-black-3">
+
+                    <div class="container text-center">
+                     <h1>欢迎进入xyzcms 内容管理系统</h1>
+                      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                      <p><a class="btn btn-red btn-large">Learn more</a></p>
+                    </div>
+                  </div>
+                </section>
+                <!-- /tile -->
+              </div>
+              <!-- /col 12 -->
+            </div>
+            <!-- /row -->
+
+          </div>
+          <!-- /content container -->
+        </div>
+        <!-- Page content end -->
+      </div>
+      <!-- Make page fluid-->
+    </div>
+    <!-- Wrap all page content end -->
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="__PUBLIC__/assets/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="__PUBLIC__/assets/js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/vendor/animate-numbers/jquery.animateNumbers.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/vendor/videobackground/jquery.videobackground.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/vendor/blockui/jquery.blockUI.js"></script>
+
+    <script src="__PUBLIC__/assets/js/vendor/flot/jquery.flot.min.js"></script>
+    <script src="__PUBLIC__/assets/js/vendor/flot/jquery.flot.time.min.js"></script>
+    <script src="__PUBLIC__/assets/js/vendor/flot/jquery.flot.selection.min.js"></script>
+    <script src="__PUBLIC__/assets/js/vendor/flot/jquery.flot.animator.min.js"></script>
+    <script src="__PUBLIC__/assets/js/vendor/flot/jquery.flot.orderBars.js"></script>
+    <script src="__PUBLIC__/assets/js/vendor/easypiechart/jquery.easypiechart.min.js"></script>
+
+    <script src="__PUBLIC__/assets/js/vendor/rickshaw/raphael-min.js"></script> 
+    <script src="__PUBLIC__/assets/js/vendor/rickshaw/d3.v2.js"></script>
+    <script src="__PUBLIC__/assets/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+    <script src="__PUBLIC__/assets/js/vendor/morris/morris.min.js"></script>
+
+    <script src="__PUBLIC__/assets/js/vendor/tabdrop/bootstrap-tabdrop.min.js"></script>
+
+    <script src="__PUBLIC__/assets/js/vendor/summernote/summernote.min.js"></script>
+
+    <script src="__PUBLIC__/assets/js/vendor/chosen/chosen.jquery.min.js"></script>
+
+    <script src="__PUBLIC__/assets/js/minimal.min.js"></script>
+
+    <script>
+    $(function(){
+
+      // Initialize card flip
+      $('.card.hover').hover(function(){
+        $(this).addClass('flip');
+      },function(){
+        $(this).removeClass('flip');
+      });
+
+
+      $(window).resize(function() {
+        // redraw the graph in the correctly sized div
+        plot.resize();
+        plot.setupGrid();
+        plot.draw();
+      });
+
+      $('#mmenu').on(
+        "opened.mm",
+        function()
+        {
+          // redraw the graph in the correctly sized div
+          plot.resize();
+          plot.setupGrid();
+          plot.draw();
+        }
+      );
+
+      $('#mmenu').on(
+        "closed.mm",
+        function()
+        {
+          // redraw the graph in the correctly sized div
+          plot.resize();
+          plot.setupGrid();
+          plot.draw();
+        }
+      );
+
+
+
+
+
+
+      
+    })
+      
+    </script>
+  </body>
+</html>
+      

@@ -1,4 +1,7 @@
 index.php
 ThinkPHP
 weizin/Common/Conf/*
+weizin/Common/Conf/config.php
+weixin/Admin/Common/Conf/config.php
+weizin/WX/Common/Conf/config.php
 weixin/Runtime
